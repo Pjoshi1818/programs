@@ -2,11 +2,30 @@
                          //basic to advanced concepts of C programming language//
 
 
-#include <stdio.h>
+// #include <stdio.h>
+// int main(){
+
+//     printf("hello, world ");
+
+//     return 0;
+// }
+
+// print fhrenheit-Celsious table for fhre. = 0 ,20 ,40,......300;//
+
+#include<stdio.h>
 int main(){
+    int far ,cal;
+    int lower= 0;
+    int upper =300;
+    int step= 20;
 
-    printf("hello, world");
-
+far = lower;
+    while(far <= upper){
+        cal = 5* (far-32) /9;
+        printf("%d \t %d \n", far ,cal);
+        far = far + step;
+    }
     return 0;
 }
+
 
