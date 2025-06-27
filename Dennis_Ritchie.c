@@ -11,21 +11,37 @@
 // }
 
 // print fhrenheit-Celsious table for fhre. = 0 ,20 ,40,......300;//
+ 
+// #include<stdio.h>
+// int main(){
+//     int far ,cal;
+//     int lower= 0;
+//     int upper =300;
+//     int step= 20;
+
+// far = lower;
+//     while(far <= upper){
+//         cal = 5* (far-32) /9;
+//         printf("%d \t %d \n", far ,cal);
+//         far = far + step;
+//     }
+//     return 0;
+// }
+
+// with floating point for more accuracy:'
 
 #include<stdio.h>
-int main(){
-    int far ,cal;
-    int lower= 0;
-    int upper =300;
-    int step= 20;
+float main(){
+    float far ,cal;
+    float lower= 0;
+    float upper =300;
+    float step= 20;
 
 far = lower;
     while(far <= upper){
         cal = 5* (far-32) /9;
-        printf("%d \t %d \n", far ,cal);
+        printf("%3f \t %6f \n", far ,cal);
         far = far + step;
     }
     return 0;
 }
-
-
