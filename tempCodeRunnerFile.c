@@ -1,12 +1,12 @@
-
 #include<stdio.h>
 int main(){
-     int c ;
-       printf("The value of EOF is: %d\n", EOF);
-     
-     while ((c=getchar()) != EOF){
-putchar(c);
+         
+        long nc =0 ;
+        int c;
+        while( getchar() != EOF){
+            ++nc;
+            printf("%1d\n",nc);
 
-     }
+        }
     return 0;
 }
