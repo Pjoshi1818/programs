@@ -30,18 +30,43 @@
 
 // with floating point for more accuracy:'
 
-#include<stdio.h>
-float main(){
-    float far ,cal;
-    float lower= 0;
-    float upper =300;
-    float step= 20;
+// #include<stdio.h>
+// float main(){
+//     float far ,cal;
+//     float lower= 0;
+//     float upper =300;
+//     float step= 20;
 
-far = lower;
-    while(far <= upper){
-        cal = 5* (far-32) /9;
-        printf("%3f \t %6f \n", far ,cal);
-        far = far + step;
-    }
+// far = lower;
+//     while(far <= upper){
+//         cal = (5.0/9.0) * (far-32.0) ;
+//         printf("%3f \t %6f \n", far ,cal);
+//         far = far + step;
+//     }
+//     return 0;
+// }
+
+// character input output
+
+// #include<stdio.h>
+// int main(){
+//      int c ;
+//      c= getchar();
+//      while (c =! EOF){
+// putchar(c);
+// c= getchar();
+//      }
+//     return 0;
+// }
+
+#include<stdio.h>
+int main(){
+     int c ;
+       printf("The value of EOF is: %d\n", EOF);
+     
+     while ((c=getchar()) != EOF){
+putchar(c);
+
+     }
     return 0;
 }
