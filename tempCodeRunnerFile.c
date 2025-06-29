@@ -1,12 +1,9 @@
 #include<stdio.h>
 int main(){
-         
-        long nc =0 ;
-        int c;
-        while( getchar() != EOF){
-            ++nc;
-            printf("%1d\n",nc);
+    double nc;
+    for(nc = 0 ; getchar() != EOF ; ++nc){
+        printf("%.0f\n", nc);
 
-        }
+    }
     return 0;
 }
