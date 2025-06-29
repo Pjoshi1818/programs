@@ -44,27 +44,41 @@
 // 	return 0;
 // }
 
-#include <iostream>
-#include <vector>
-using namespace std;
-              void pankaj(vector<int>& nums)
-              {
-                    int key =25;
-            for(int i : nums){
-                if (i == key){
-                    cout<<"key is found :"<<i;
-                    break;
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+//               void pankaj(vector<int>& nums)
+//               {
+//                     int key =25;
+//             for(int i : nums){
+//                 if (i == key){
+//                     cout<<"key is found :"<<i;
+//                     break;
 
-                }}
-              }
-int main()
-{
-    vector<int> vec;
-    vec.push_back(25);
-    vec.push_back(30);
-    vec.push_back(35);
-    vec.push_back(45);
- cout<< pankaj(vec);
+//                 }}
+//               }
+// int main()
+// {
+//     vector<int> vec;
+//     vec.push_back(25);
+//     vec.push_back(30);
+//     vec.push_back(35);
+//     vec.push_back(45);
+//  cout<< pankaj(vec);
   
-    return 0;
-}
+//     return 0;
+// }
+
+//
+
+// #include<iostream>
+// #include<vector>
+
+// using namespace std;
+// int main(){
+//     vector<int> vec = {1 ,2,3};
+//     cout<<vec[1];
+    
+//     return 0;
+
+// }
