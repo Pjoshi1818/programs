@@ -1,5 +1,5 @@
                         //chapter 1 //
-                         //basic to advanced concepts of C programming language//
+                         //basic to advanced concepts of C programming language//   26.6.2025
 
 
 // #include <stdio.h>
@@ -28,7 +28,7 @@
 //     return 0;
 // }
 
-// with floating point for more accuracy:'
+// with floating point for more accuracy:'   27.6.2025
 
 // #include<stdio.h>
 // float main(){
@@ -83,7 +83,7 @@
 //         }
 //     return 0;
 // }
-                                //second version 
+                                //second version   28.6.2025
 // #include<stdio.h>
 // int main(){
 //     double nc;
@@ -95,7 +95,7 @@
 //     return 0;
 // }
 
-                        // count new line 
+                        // count new line   29.6.2025
                     
 // #include<stdio.h>
 // int main(){
@@ -107,31 +107,66 @@
 //     return 0;
 // }
 
-#include <stdio.h>
 
-#define IN 1   // inside a word
-#define OUT 0  // outside a word
 
-int main() {
-    int c, nl, nw, nc, state;
 
-    state = OUT;
-    nl = nw = nc = 0;
+// #include <stdio.h>
 
-    while ((c = getchar()) != EOF) {
-        ++nc;
+// #define IN 1   // inside a word
+// #define OUT 0  // outside a word
 
-        if (c == '\n')
-            ++nl;
+// int main() {
+//     int c, nl, nw, nc, state;
 
-        if (c == ' ' || c == '\n' || c == '\t')
-            state = OUT;
-        else if (state == OUT) {
-            state = IN;
-            ++nw;
-        }
+//     state = OUT;
+//     nl = nw = nc = 0;
+
+//     while ((c = getchar()) != EOF) {
+//         ++nc;
+
+//         if (c == '\n')
+//             ++nl;
+
+//         if (c == ' ' || c == '\n' || c == '\t')
+//             state = OUT;
+//         else if (state == OUT) {
+//             state = IN;
+//             ++nw;
+//         }
+//     }
+
+//     printf("Lines: %d  Words: %d  Characters: %d\n", nl, nw, nc);
+//     return 0;
+// }
+
+                       // Array                 30.6.2025 
+
+    #include<stdio.h>
+    int main(){
+            
+
+        int i ,c ,nwhite,nother;
+        nwhite = nother=0;
+        int arr[10];
+
+        for (i = 0 ; i < 10 ;i++ )
+            arr[i] = 0;
+        
+        while((c = getchar()) != EOF)
+         if( c>= '0' && c<='9')
+            ++arr[c-'0'];
+            else if (c == ' '|| c== '\n' || c== '\t'  )
+            ++nwhite;
+            else
+                ++nother;
+
+
+
+                printf("degit = ");
+                for (i = 0 ; i < 10 ;i++ )
+                    printf("%d ",arr[i]);
+                 
+                    printf(" wj=hite spaces is  = %d, others = %d ",nwhite ,nother );
+        
+        return 0 ;
     }
-
-    printf("Lines: %d  Words: %d  Characters: %d\n", nl, nw, nc);
-    return 0;
-}

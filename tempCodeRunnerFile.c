@@ -1,28 +1,27 @@
-#include <stdio.h>
+#include<stdio.h>
+    int main(){
+            
 
-#define IN 1   // inside a word
-#define OUT 0  // outside a word
+        int i ,c ,nwhite,nother;
+        int arr[10];
 
-int main() {
-    int c, nl, nw, nc, state;
-
-    state = OUT;
-    nl = nw = nc = 0;
-
-    while ((c = getchar()) != EOF) {
-        ++nc;
-
-        if (c == '\n')
-            ++nl;
-
-        if (c == ' ' || c == '\n' || c == '\t')
-            state = OUT;
-        else if (state == OUT) {
-            state = IN;
-            ++nw;
+        for (i = 0 ; i < 10 ;i++ ){
+            arr[i] = 0;
         }
-    }
+        while((c = getchar()) != EOF)
+         if( c>= 0 && c<=9)
+            ++arr[c-'0'];
+            else if (c == ' '|| c== '\n' || c== '\t'  )
+            ++nwhite;
+            else
+                ++nother;
 
-    printf("Lines: %d  Words: %d  Characters: %d\n", nl, nw, nc);
-    return 0;
-}
+
+
+                printf("degit = ");
+                for (i = 0 ; i < 10 ;i++ ){
+                    printf("%d ",arr[i]);
+                    printf(" wj=hite spaces is  = %d, others = %d ",nwhite ,nother );
+        }
+        return 0 ;
+    }
