@@ -1,21 +1,57 @@
-    #include<stdio.h>
-    int power( int m , int n);
-    int main(){
-         
+#include <stdio.h>
+#define MAXLINE 1000
 
-        for(int i  = 0; i<=10;i++){
-            printf(" %d \t   %d \t  %d \n ",i  , power(2,i) , power(-3,i));
-            
+int my_getline(char line[], int maxline);
+void copy(char to[], char from[]);
+
+main()
+{
+    int len;
+    int max;
+    char line[MAXLINE];
+    char longest[MAXLINE];
+
+    max = 0;
+    while ((len = my_getline e(line, MAXLINE)) > 0){
+        if (len > max)
+        {
+            max = len;
+            copy(longest, line);
         }
-
-        
-        return 0;
     }
-    power(int base , int n){
-            int p = 1;
-            for(int i = 1 ; i<=n;++i){
-                p = p*base;
-                
-            }
-            return p;
+    if (max > 0)
+    {
+        printf("%s", longest);
+    }
+
+    return 0;
+}
+
+//my_getline e 
+
+int my_getline(char s[],int lim ){
+    int c ,i;
+
+    for(i=0 ;i<lim-1 && (c = getchar())!=EOF &&  c!='\n';++i){
+        s[i]= c;
+    }
+        if(c=='\n'){
+            s[i] = c;
+            ++i;
         }
+        s[i] = '\0';
+        return i;
+        
+    }
+
+
+
+
+void copy(char to[],char from[]){
+    int i ;
+    i = 0;
+    while((to[i]= from[i]) != '\0'){
+        ++i;
+    }
+    
+}

@@ -1,6 +1,5 @@
-                        //chapter 1 //
-                         //basic to advanced concepts of C programming language//   26.6.2025
-
+// chapter 1 //
+// basic to advanced concepts of C programming language//   26.6.2025
 
 // #include <stdio.h>
 // int main(){
@@ -11,7 +10,7 @@
 // }
 
 // print fhrenheit-Celsious table for fhre. = 0 ,20 ,40,......300;//
- 
+
 // #include<stdio.h>
 // int main(){
 //     int far ,cal;
@@ -63,7 +62,7 @@
 // int main(){
 //      int c ;
 //        printf("The value of EOF is: %d\n", EOF);
-     
+
 //      while ((c=getchar()) != EOF){
 // putchar(c);
 
@@ -73,7 +72,7 @@
 
 // #include<stdio.h>
 // int main(){
-         
+
 //         long nc =0 ;
 //         int c;
 //         while( getchar() != EOF){
@@ -83,7 +82,7 @@
 //         }
 //     return 0;
 // }
-                                //second version   28.6.2025
+// second version   28.6.2025
 // #include<stdio.h>
 // int main(){
 //     double nc;
@@ -91,12 +90,11 @@
 //     ;
 //         printf("%.0f\n", nc);
 
-    
 //     return 0;
 // }
 
-                        // count new line   29.6.2025
-                    
+// count new line   29.6.2025
+
 // #include<stdio.h>
 // int main(){
 //   int nl =0 ,c ;
@@ -106,9 +104,6 @@
 //   printf("%d \n", nl);
 //     return 0;
 // }
-
-
-
 
 // #include <stdio.h>
 
@@ -139,59 +134,111 @@
 //     return 0;
 // }
 
-                       // Array                 30.6.2025 
+// Array                 30.6.2025
 
-    // #include<stdio.h>
-    // int main(){
-            
+// #include<stdio.h>
+// int main(){
 
-    //     int i ,c ,nwhite,nother;
-    //     nwhite = nother=0;
-    //     int arr[10];
+//     int i ,c ,nwhite,nother;
+//     nwhite = nother=0;
+//     int arr[10];
 
-    //     for (i = 0 ; i < 10 ;i++ )
-    //         arr[i] = 0;
-        
-    //     while((c = getchar()) != EOF)
-    //      if( c>= '0' && c<='9')
-    //         ++arr[c-'0'];
-    //         else if (c == ' '|| c== '\n' || c== '\t'  )
-    //         ++nwhite;
-    //         else
-    //             ++nother;
+//     for (i = 0 ; i < 10 ;i++ )
+//         arr[i] = 0;
 
+//     while((c = getchar()) != EOF)
+//      if( c>= '0' && c<='9')
+//         ++arr[c-'0'];
+//         else if (c == ' '|| c== '\n' || c== '\t'  )
+//         ++nwhite;
+//         else
+//             ++nother;
 
+//             printf("degit = ");
+//             for (i = 0 ; i < 10 ;i++ )
+//                 printf("%d ",arr[i]);
 
-    //             printf("degit = ");
-    //             for (i = 0 ; i < 10 ;i++ )
-    //                 printf("%d ",arr[i]);
-                 
-    //                 printf(" wj=hite spaces is  = %d, others = %d ",nwhite ,nother );
-        
-    //     return 0 ;
-    // }
+//                 printf(" wj=hite spaces is  = %d, others = %d ",nwhite ,nother );
 
+//     return 0 ;
+// }
 
-                            // power function :
+// power function :
 
-    #include<stdio.h>
-    int power( int m , int n);
-    int main(){
-         
+// #include<stdio.h>
+// int power( int m , int n);
+// int main(){
 
-        for(int i  = 0; i<=10;i++){
-            printf(" %d \t   %d \t\t %d \n ",i  , power(2,i) , power(-3,i));
-            
+//     for(int i  = 0; i<=10;i++){
+//         printf(" %d \t   %d \t\t %d \n ",i  , power(2,i) , power(-3,i));
+
+//     }
+
+//     return 0;
+// }
+// power(int base , int n){
+//         int p = 1;
+//         for(int i = 1 ; i<=n;++i){
+//             p = p*base;
+
+//         }
+//         return p;
+//     }
+
+#include <stdio.h>
+#define MAXLINE 1000
+
+int my_getline(char line[], int maxline);
+void copy(char to[], char from[]);
+
+main()
+{
+    int len;
+    int max;
+    char line[MAXLINE];
+    char longest[MAXLINE];
+
+    max = 0;
+    while ((len = my_getline(line, MAXLINE)) > 0){
+        if (len > max)
+        {
+            max = len;
+            copy(longest, line);
         }
-
-        
-        return 0;
     }
-    power(int base , int n){
-            int p = 1;
-            for(int i = 1 ; i<=n;++i){
-                p = p*base;
-                
-            }
-            return p;
+    if (max > 0)
+    {
+        printf("%s", longest);
+    }
+
+    return 0;
+}
+
+//my_getline e 
+
+int my_getline(char s[],int lim ){
+    int c ,i;
+
+    for(i=0 ;i<lim-1 && (c = getchar())!=EOF &&  c!='\n';++i){
+        s[i]= c;
+    }
+        if(c=='\n'){
+            s[i] = c;
+            ++i;
         }
+        s[i] = '\0';
+        return i;
+        
+    }
+
+
+
+
+void copy(char to[],char from[]){
+    int i ;
+    i = 0;
+    while((to[i]= from[i]) != '\0'){
+        ++i;
+    }
+    
+}
