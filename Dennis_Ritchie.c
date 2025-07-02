@@ -185,6 +185,19 @@
 //         return p;
 //     }
 
+
+
+//  Summary in Simple Terms
+// User se line input lete ho.
+
+// Har line ka length check karte ho.
+
+// Sabse badi line ko store karte ho.
+
+// End mein us longest line ko print karte ho.
+
+
+
 #include <stdio.h>
 #define MAXLINE 1000
 
