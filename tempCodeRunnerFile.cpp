@@ -1,40 +1,19 @@
-// #include <iostream>
-// #include <vector>
-// using namespace std;
+    //**** / prime number \****
+    #include<iostream>
+    using namespace  std;
+    bool prime(int n ){
+                for(int i =2; i<n/2;i++){
+                    if(n%i==0){
+                        cout<<" not prime";
+                        return;
+                    }
+                    cout<<"prime"
+;                }
+    }
+    int main(){
+        int n ;
+        cin>>n;
+        prime(n);
 
-// int main()
-// {
-//     vector<int> vec;
-//     cout << "size = " << vec.size() << endl;
-//     vec.push_back(25);
-//     vec.push_back(25);
-//     vec.push_back(25);
-//     cout << "after use push size is := " << vec.size() << endl;
-//     vec.pop_back();
-//     cout << "front = " << vec.front() << endl
-//          << "in vecyor element are :";
-
-//     for (int val : vec)
-//     {
-//         cout << val << endl;
-//     }
-//     return 0;
-// }
-#include<iostream>
-using namespace std;
-
-int sumofDigits(int num){
-	int digSum=0;
-	while(num > 0){
-		int lastdig = num%10;
-	 num = num/10; 
-	 digSum  += lastdig;
-	}
-	return digSum;
-}
-
-int main(){
-
-		cout<<"sum of"<<sumofDigits (1056) <<endl;
-	return 0;
-}
+        return 0;
+    }
